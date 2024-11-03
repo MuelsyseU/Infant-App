@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8" />
+    <title>工具</title>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <link href="src/main.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="src/jquery.min.js"></script>
+    <script type="text/javascript" src="src/bootstrap.min.js"></script>
+    <script type="text/javascript" src="src/recorder.js"></script>
+</head>
+
+<body>
+<div id="app">
+    <img alt="logo" class="logo" src="./assets/system.svg" />
+    <div class="creator">Interpreter of Babys' Voice</div>
+    <div class="text h1">
+        婴·语
+<!--        <span class="js">音频</span>-->
+    </div>
+    <p class="tip text-center"></p>
+    <p class="result text-center">&nbsp;</p>
+    <div class="actions">
+        <div class="action">
+            <button id="recordStart" rel="noreferrer">录制音频</button>
+            <button id="recordStop" style="display: none" rel="noreferrer">结束录制</button>
+        </div>
+        <div class="action">
+            <input class="d-none" type="file" name="file" accept="audio/*" id="fileInput"/>
+            <button id="fileSelect" rel="noreferrer">选择音频</button>
+        </div>
+    </div>
+
+    <ul class="versions">
+        <li>邹秉原创作</li>
+    </ul>
+</div>
+<!-- Invisible Controls -->
+<!-- Modal -->
+<div class="modal fade" id="myModal" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="background: rgba(50,50,50,0.5); backdrop-filter: blur(4px);">
+            <div class="modal-body text-center"></div>
+            <div class="modal-footer mx-auto">
+                <button type="button" class="modal-cancel btn btn-danger">取消</button>
+                <button type="button" class="modal-confirm btn btn-primary">确认</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="./src/renderer.js"></script>
+</body>
+</html>
